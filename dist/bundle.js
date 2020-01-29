@@ -81,19 +81,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/index.js":
+/***/ "./src/App.ts":
+/*!********************!*\
+  !*** ./src/App.ts ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.App = function () {\r\n    console.log('Inside App');\r\n    // game\r\n    var game = new MaintainableGame.Game();\r\n};\r\n// -------------------------------------------------------------------------\r\n// -------------------------------------------------------------------------\r\nwindow.onload = function () { return exports.App(); };\r\n\n\n//# sourceURL=webpack:///./src/App.ts?");
+
+/***/ }),
+
+/***/ "./src/index.ts":
 /*!**********************!*\
-  !*** ./src/index.js ***!
+  !*** ./src/index.ts ***!
   \**********************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("console.log('Phaser JS Template');\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar App_1 = __webpack_require__(/*! ./App */ \"./src/App.ts\");\r\nconsole.log('Phaser JS Template');\r\nexports.default = App_1.App;\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ })
 
