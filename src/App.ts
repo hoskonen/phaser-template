@@ -1,17 +1,13 @@
 import * as Phaser from 'phaser';
 
-namespace App {
-
+export const App = () => {
+  console.log('Inside App')
   // game
-  export let game: Phaser.Game = null;
+  const game: Phaser.Game = new MaintainableGame.Game();
 }
 
 // -------------------------------------------------------------------------
-function launch(): void {
 
-  let game = new MaintainableGame.Game();
-  App.game = game;
-}
 
 // -------------------------------------------------------------------------
-window.onload = launch;
+window.onload = () => App();

@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "start:dev": "webpack-dev-server"
   },
   "author": "Petri Hoskonen",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "autoprefixer": "^9.7.4",
+    "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "browserlist": "^1.0.1",
     "css-loader": "^3.4.2",
@@ -26,7 +28,8 @@
     "sass-loader": "^8.0.2",
     "typescript": "^3.7.5",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
     "phaser": "^3.22.0"

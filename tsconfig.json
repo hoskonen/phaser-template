@@ -11,7 +11,6 @@
     "lib": [
       "es5",
       "dom",
-      "es2015.promise",
       "scripthost"
     ],
     "outDir": "./build/"
