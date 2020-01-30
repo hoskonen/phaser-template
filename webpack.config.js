@@ -103,7 +103,13 @@ module.exports = {
 
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      '@assets': path.resolve(__dirname, './src/assets'),
+      '@config': path.resolve(__dirname, './src/config'),
+      '@scenes': path.resolve(__dirname, './src/scenes')
+    }
   },
 
   plugins: [

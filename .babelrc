@@ -2,6 +2,9 @@
   "presets": [
     [
       "@babel/env",
+      {
+        "modules": false
+      },
       "@babel/preset-typescript"
     ]
   ],
@@ -9,9 +12,6 @@
     [
       "module-resolver",
       {
-        "root": [
-          "."
-        ],
         "alias": {
           "@assets": "./src/assets",
           "@scenes": "./src/scenes"
