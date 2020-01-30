@@ -15,7 +15,15 @@
       "dom",
       "scripthost"
     ],
-    "outDir": "./build/"
+    "outDir": "./build/",
+    "paths": {
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@scenes/*": [
+        "./src/scenes/*"
+      ]
+    },
   },
   "include": [
     "lib/**/*",
