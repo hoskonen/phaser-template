@@ -10,6 +10,10 @@
     "build": "webpack --config webpack.config.js",
     "start:dev": "webpack-dev-server"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoskonen/phaser-template.git"
+  },
   "author": "Petri Hoskonen",
   "license": "ISC",
   "devDependencies": {

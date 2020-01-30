@@ -1,4 +1,4 @@
-import * as Phaser from "phaser";
+import Phaser from "phaser";
 import config from './Config/config';
 import GameScene from './Scenes/GameScene';
 
@@ -10,4 +10,4 @@ class Game extends Phaser.Game {
   }
 }
 
-// window.game = new Game();
+window.game = new Game();
