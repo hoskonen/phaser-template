@@ -43,5 +43,11 @@
   "exclude": [
     "node_modules",
     ".git"
+  ],
+  "typeRoots": [
+    "./node_modules/phaser/types"
+  ],
+  "types": [
+    "Phaser"
   ]
 }

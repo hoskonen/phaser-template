@@ -101,6 +101,10 @@ module.exports = {
     ]
   },
 
+  devServer: {
+    watchContentBase: true
+  },
+
   resolve: {
     modules: ['node_modules'],
     extensions: ['.ts', '.tsx', '.js', '.jsx'],

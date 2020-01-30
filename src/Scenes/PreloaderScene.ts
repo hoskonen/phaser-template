@@ -1,23 +1,24 @@
 import Phaser from "phaser";
 
-// interface IPreloaderScene {
-//   readyCount: number
-// }
-
 export default class PreloaderScene extends Phaser.Scene {
-  readyCount: number;
+  readyCount: number | null;
+  timedEvent: any
 
   constructor() {
     super('Preloader');
-    this.readyCount = 0
+    this.readyCount = null
   }
 
   init() {
-    // this.readyCount = 0;
+    this.readyCount = 0;
   }
 
   ready() {
-    this.readyCount++;
+    console.log('in preloader')
+    if (this.readyCount) {
+      this.readyCount++;
+    }
+
     if (this.readyCount === 2) {
       this.scene.start('Title');
     }
@@ -83,14 +84,23 @@ export default class PreloaderScene extends Phaser.Scene {
     });
 
     // remove progress bar when complete
-    this.load.on('complete', function () {
+    // this.load.on('complete', function () {
+    //   progressBar.destroy();
+    //   progressBox.destroy();
+    //   loadingText.destroy();
+    //   percentText.destroy();
+    //   assetText.destroy();
+    //   this.ready();
+    // }.bind(this));
+
+    this.load.on('complete', () => {
       progressBar.destroy();
       progressBox.destroy();
       loadingText.destroy();
       percentText.destroy();
       assetText.destroy();
       this.ready();
-    }.bind(this));
+    });
 
     this.timedEvent = this.time.delayedCall(3000, this.ready, [], this);
 
