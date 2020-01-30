@@ -9,5 +9,6 @@ export default class TitleScene extends Phaser.Scene {
   }
 
   create() {
+    console.log(`You're inside TitleScene!`)
   }
 };

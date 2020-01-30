@@ -10,6 +10,7 @@ export default class BootScene extends Phaser.Scene {
   }
 
   create() {
+    console.log(`You're inside BootScene!`)
     this.scene.start('Preloader')
   }
 };

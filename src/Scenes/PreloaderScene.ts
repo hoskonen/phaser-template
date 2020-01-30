@@ -14,7 +14,7 @@ export default class PreloaderScene extends Phaser.Scene {
   }
 
   ready() {
-    console.log('in preloader')
+    console.log(`You're inside PreloaderScene!`)
     if (this.readyCount) {
       this.readyCount++;
     }
