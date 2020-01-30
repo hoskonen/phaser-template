@@ -2,6 +2,7 @@ const webpack = require("webpack");
 // Webpack uses this to work with directories
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // This is main configuration object.
 // Here you write different options and tell Webpack what to do
@@ -106,7 +107,17 @@ module.exports = {
   },
 
   plugins: [
-
+  /**
+   * All files inside webpack's output.path directory will be removed once, but the
+   * directory itself will not be. If using webpack 4+'s default configuration,
+   * everything under <PROJECT_DIR>/dist/ will be removed.
+   * Use cleanOnceBeforeBuildPatterns to override this behavior.
+   *
+   * During rebuilds, all webpack assets that are not used anymore
+   * will be removed automatically.
+   *
+   * See `Options and Defaults` for information
+   */
     new MiniCssExtractPlugin({
       filename: "bundle.css"
     }),
@@ -114,6 +125,10 @@ module.exports = {
       CANVAS_RENDERER: JSON.stringify(true),
       WEBGL_RENDERER: JSON.stringify(true)
     }),
+    new HtmlWebpackPlugin({
+      title: 'Phaser Template',
+      filename: '../index.html'
+    })
 
   ],
 

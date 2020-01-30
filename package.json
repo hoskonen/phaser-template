@@ -2,7 +2,7 @@
   "name": "phaser-template",
   "version": "1.0.0",
   "description": "Phaser JS Template",
-  "main": "index.js",
+  "main": "src/index.ts",
   "directories": {
     "lib": "lib"
   },
@@ -22,6 +22,7 @@
     "css-loader": "^3.4.2",
     "cssnano": "^4.1.10",
     "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
     "postcss-loader": "^3.0.0",
     "sass": "^1.25.0",
