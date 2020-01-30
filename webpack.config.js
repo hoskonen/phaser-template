@@ -126,7 +126,9 @@ module.exports = {
       WEBGL_RENDERER: JSON.stringify(true)
     }),
     new HtmlWebpackPlugin({
+      hash: true,
       title: 'Phaser Template',
+      template: './src/template.html',
       filename: '../index.html'
     })
 
