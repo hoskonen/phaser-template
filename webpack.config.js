@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 // Webpack uses this to work with directories
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -108,7 +109,11 @@ module.exports = {
 
     new MiniCssExtractPlugin({
       filename: "bundle.css"
-    })
+    }),
+    new webpack.DefinePlugin({
+      CANVAS_RENDERER: JSON.stringify(true),
+      WEBGL_RENDERER: JSON.stringify(true)
+    }),
 
   ],
 
